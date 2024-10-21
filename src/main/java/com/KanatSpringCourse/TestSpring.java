@@ -8,11 +8,12 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
+        /*
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
         musicPlayer.playMusic(MusicGenre.CLASSICAL);
         musicPlayer.playMusic(MusicGenre.ROCK);
-
+*/
 
 
 
@@ -74,6 +75,25 @@ public class TestSpring {
 //
 //        System.out.println(firstMusicPlayer.getVolume());
 //        System.out.println(secondMusicPlayer.getVolume());
+
+
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+
+
+
+        /*System.out.println(musicPlayer.getName());
+        System.out.println(musicPlayer.getVolume()); // check of work annotation @Value */
+
+        /*ClassicalMusic classicalMusic1 = context.getBean("musicBean", ClassicalMusic.class);
+        ClassicalMusic classicalMusic2 = context.getBean("musicBean", ClassicalMusic.class);
+
+        System.out.println(classicalMusic2 == classicalMusic1);  //check of work annotation @Scope("singleton") */
+
+        /*RockMusic rockMusic1 = context.getBean("rockMusic", RockMusic.class);
+        RockMusic rockMusic2 = context.getBean("rockMusic", RockMusic.class);
+        System.out.println(rockMusic1 == rockMusic2); // check of work annotation @Scope("prototype") */
+
+        /*RockMusic rockMusic = context.getBean("rockMusic", RockMusic.class); // check of work annotation @PostConstruct и @PreDestroy */
 
         context.close();
     }
