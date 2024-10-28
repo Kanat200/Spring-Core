@@ -1,25 +1,41 @@
 package com.KanatSpringCourse;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
+/*
 @Component
+*/
+
 public class MusicPlayer {
+
+    /*
     @Value("${musicPlayer.name}")
     private String name;
     @Value("${musicPlayer.volume}")
     private int volume;
+*/
 
+    private List<Music> musicList;
 
+    public MusicPlayer(List<Music> musicList){
+        this.musicList = musicList;
+    }
+//    Random random = new Random();
+//    int randomNumber = random.nextInt(5);
+
+    public String playMusic() {
+        Random random = new Random();
+
+        return "Playing: " + musicList.get(random.nextInt(musicList.size())).getSongs();
+
+    }
+
+    /*
     private ClassicalMusic classicalMusic;
     private RockMusic rockMusic;
+    */
 
+/*
     public String getName() {
         return name;
     }
@@ -27,7 +43,7 @@ public class MusicPlayer {
     public int getVolume() {
         return volume;
     }
-
+*/
     /*
     @Autowired
     @Qualifier ("musicBean")
@@ -42,13 +58,15 @@ public class MusicPlayer {
 //        this.classicalMusic = classicalMusic;
 //        this.rockMusic = rockMusic;
 //    }
-
+/*
     @Autowired
     public MusicPlayer (ClassicalMusic classicalMusic, RockMusic rockMusic) {
         this.classicalMusic = classicalMusic;
         this.rockMusic = rockMusic;
     }
+*/
 
+    /*
     public void playMusic (MusicGenre genre) {
         Random random = new Random();
 
@@ -60,7 +78,7 @@ public class MusicPlayer {
             System.out.println(rockMusic.getSongs().get(randomNumber));
         }
     }
-
+*/
 
 //    public String  playMusic() {
 //

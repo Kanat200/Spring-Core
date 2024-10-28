@@ -1,14 +1,16 @@
-package com.KanatSpringCourse;
+package com.KanatSpringCourse.genres;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import com.KanatSpringCourse.Music;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
 @Component ("musicBean")
 @Scope("singleton")
-public class ClassicalMusic implements Music{
+*/
+
+
+public class ClassicalMusic implements Music {
 
 
     private List<String> classicalSongs = new ArrayList<>();
@@ -23,7 +25,12 @@ public class ClassicalMusic implements Music{
     }
 
     @Override
-    public List<String> getSongs() {
-        return classicalSongs;
+    public String getSongs() {
+        return "Hungarian Rhapsody";
     }
+
+//    @Override
+//    public String toString() {
+//        return "Playing: " + classicalSongs.get(0) + ", " + classicalSongs.get(1) + ", " + classicalSongs.get(2);
+//    }
 }

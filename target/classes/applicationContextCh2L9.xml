@@ -10,7 +10,7 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="musicBean"
-          class="com.KanatSpringCourse.AncientMusic"
+          class="com.KanatSpringCourse.genres.AncientMusic"
           init-method="doMyInt"
           destroy-method="doMyDestroy"
           factory-method="getAncientMusic">

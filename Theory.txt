@@ -153,3 +153,22 @@ Java аннотации - это специальный тип коммента�
 
 -- @PostConstruct = init-method
 -- @PreDestroy = destroy-method
+
+
+
+
+
+@Configuration - для аннотаций класса конфигураций
+
+@Beam - для аннотаций когда нужно вручную
+{
+@Bean
+public Class beanID() {
+return new Class();
+}
+}
+
+Вместо ClassPathXmlApplicationContext, AnnotationConfigAppilcationContext
+
+@PropertySource("classpath:somecalss.properties")
+

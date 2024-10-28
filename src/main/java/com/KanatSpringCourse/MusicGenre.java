@@ -1,5 +1,5 @@
 package com.KanatSpringCourse;
 
 public enum MusicGenre {
-    CLASSICAL, ROCK
+    CLASSICAL, ROCK, ANCIENT, JAZZ
 }

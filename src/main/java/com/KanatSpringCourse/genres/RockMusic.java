@@ -1,27 +1,27 @@
-package com.KanatSpringCourse;
+package com.KanatSpringCourse.genres;
 
+import com.KanatSpringCourse.Music;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/*
 @Component
 @Scope("prototype")
-
-public class RockMusic implements Music{
-
-    @PostConstruct
-    public void doMyInt() {
-        System.out.println("Doing my initialization");
-    }
-
-    @PreDestroy
-    public void doMyDestroy() {
-        System.out.println("Doing my destruction");
-    }
+*/
+public class RockMusic implements Music {
+//
+//    @PostConstruct
+//    public void doMyInt() {
+//        System.out.println("Doing my initialization");
+//    }
+//
+//    @PreDestroy
+//    public void doMyDestroy() {
+//        System.out.println("Doing my destruction");
+//    }
 
     private List<String> rockSongs = new ArrayList<>();
 
@@ -35,7 +35,12 @@ public class RockMusic implements Music{
 
 
     @Override
-    public List<String> getSongs() {
-        return rockSongs;
+    public String getSongs() {
+        return "Wind cries Mary";
     }
+//
+//    @Override
+//    public String toString() {
+//        return "Playing: " + rockSongs.get(0) + ", " + rockSongs.get(1) + ", " + rockSongs.get(2);
+//    }
 }

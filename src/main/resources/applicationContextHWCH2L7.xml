@@ -10,15 +10,15 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="AncientMusicBean"
-          class="com.KanatSpringCourse.AncientMusic">
+          class="com.KanatSpringCourse.genres.AncientMusic">
     </bean>
 
     <bean id="ClassicalMusicBean"
-          class="com.KanatSpringCourse.ClassicalMusic">
+          class="com.KanatSpringCourse.genres.ClassicalMusic">
     </bean>
 
     <bean id="RockMusicBean"
-          class="com.KanatSpringCourse.RockMusic">
+          class="com.KanatSpringCourse.genres.RockMusic">
     </bean>
 
     <bean id="musicPlayer"

@@ -1,12 +1,19 @@
 package com.KanatSpringCourse;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.KanatSpringCourse.config.SpringConfig;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.Random;
 
 public class TestSpring {
     public static void main(String[] args) {
+        /*
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
+*/
+
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
 
         /*
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
@@ -79,8 +86,7 @@ public class TestSpring {
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-
-
+        System.out.println(musicPlayer.playMusic());
         /*System.out.println(musicPlayer.getName());
         System.out.println(musicPlayer.getVolume()); // check of work annotation @Value */
 
@@ -93,7 +99,8 @@ public class TestSpring {
         RockMusic rockMusic2 = context.getBean("rockMusic", RockMusic.class);
         System.out.println(rockMusic1 == rockMusic2); // check of work annotation @Scope("prototype") */
 
-        /*RockMusic rockMusic = context.getBean("rockMusic", RockMusic.class); // check of work annotation @PostConstruct и @PreDestroy */
+        /*
+        RockMusic rockMusic = context.getBean("rockMusic", RockMusic.class); // check of work annotation @PostConstruct и @PreDestroy */
 
         context.close();
     }
